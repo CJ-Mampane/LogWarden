@@ -1,0 +1,20 @@
+2026-05-30 08:12:43 INFO inbound-traffic IP 192.168.1.50 connection established port 22
+2026-05-30 08:12:45 INFO sshd[1024]: Accepted password for cathrene from 192.168.1.50 port 22 ssh2
+2026-05-30 09:34:12 INFO inbound-traffic IP 192.168.1.65 connection established port 80
+2026-05-30 09:34:15 INFO web-server GET /index.html HTTP/1.1 200 OK from 192.168.1.65
+2026-05-30 11:15:00 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-05-30 14:22:01 INFO inbound-traffic IP 203.0.113.5 connection established port 22
+2026-05-30 14:22:03 WARN sshd[2045]: Failed password for invalid user admin from 203.0.113.5 port 22 ssh2
+2026-05-30 14:22:05 WARN sshd[2045]: Failed password for invalid user admin from 203.0.113.5 port 22 ssh2
+2026-05-30 14:22:08 WARN sshd[2045]: Failed password for invalid user admin from 203.0.113.5 port 22 ssh2
+2026-05-30 14:22:11 WARN sshd[2045]: Failed password for invalid user admin from 203.0.113.5 port 22 ssh2
+2026-05-30 14:22:14 WARN sshd[2045]: Failed password for invalid user admin from 203.0.113.5 port 22 ssh2
+2026-05-30 14:23:40 INFO inbound-traffic IP 192.168.1.50 connection established port 22
+2026-05-30 14:23:43 INFO sshd[1024]: Accepted password for cathrene from 192.168.1.50 port 22 ssh2
+2026-05-30 16:45:19 INFO web-server GET /about.html HTTP/1.1 200 OK from 192.168.1.70
+2026-05-30 19:11:02 INFO systemd[1]: Security-Auditing service status: ACTIVE
+2026-05-30 23:02:55 INFO inbound-traffic IP 198.51.100.12 connection established port 22
+2026-05-30 23:03:00 CRIT sshd[3112]: Unauthorized su root attempt failed from 198.51.100.12
+2026-05-30 23:15:22 INFO web-server GET /images/patrick.png HTTP/1.1 200 OK from 192.168.1.50
+2026-05-30 23:55:00 INFO systemd[1]: Starting Daily System Backup Utility...
+2026-05-30 23:59:59 INFO systemd[1]: Backup utility completed successfully.
