@@ -50,11 +50,54 @@ def analyze_logs(log_file_path):
         else:
             print("No critical infrastructure alerts found.")
 
-        print("\nMission complete. All logs have been inspected.")
+
+
+        report_path = "incident_report.md"
+        print(f"\nSaving incident report to '{report_path}'...")
+
+        try:
+            with open(report_path, "w") as report:
+
+                report.write("# LogWarden INCIDENT REPORT\n")
+
+                report.write("## SUMMARY\n\n")
+                report.write("Automated scan of system logs completed. "
+                             "Below are the detected anomalies and flagged activities.\n\n")
+
+                # Brute force section
+                report.write("## BRUTE FORCE DETECTION\n\n")
+
+                bf_found = False
+
+                for ip, count in failed_login_counts.items():
+                    if count > 3:
+                        report.write(f"Suspicious IP: {ip}\n")
+                        report.write(f"Failed attempts: {count}\n")
+                        report.write(f"Status: Flagged for possible brute force activity\n\n")
+                        bf_found = True
+
+                if not bf_found:
+                    report.write("No brute force patterns detected in this scan.\n\n")
+
+                # Critical alerts section
+                report.write("## CRITICAL EVENTS\n\n")
+
+                if critical_alerts:
+                    for alert in critical_alerts:
+                        report.write(f"{alert}\n")
+                else:
+                    report.write("No critical system alerts found.\n")
+
+                report.write("\n---\n")
+                report.write("LogWarden scan complete.\n")
+
+        except Exception as e:
+            print(f"Error while writing report: {e}")
+
+        print("\nScan finished. Report generated successfully.")
 
     except FileNotFoundError:
         print(f"Error: Could not find the log file at '{log_file_path}'. Please check the path.")
-
 
 # Run the monitor
 if __name__ == "__main__":
