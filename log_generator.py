@@ -35,6 +35,7 @@ def create_logs(file_name, number_of_events):
         "Security-Auditing Service"
     ]
 
+    # used to simulate repeated attacker behavior
     failed_ips = []
 
     with open(file_name, "w") as file:
@@ -75,7 +76,6 @@ def create_logs(file_name, number_of_events):
                     f"{timestamp} INFO systemd[1]: Started {random.choice(services)}.\n"
                 )
 
-            # Failed login (single attempts)
             elif event_type == "failed_login":
 
                 ip = generate_ip()
@@ -90,7 +90,6 @@ def create_logs(file_name, number_of_events):
                 attacker_ip = generate_ip()
                 target_user = "admin"
 
-                # simulate multiple rapid failures
                 for _ in range(random.randint(4, 7)):
 
                     current_time += timedelta(seconds=random.randint(1, 3))
@@ -101,7 +100,6 @@ def create_logs(file_name, number_of_events):
                         f"{target_user} from {attacker_ip} port 22 ssh2\n"
                     )
 
-            # Privilege escalation attempt
             elif event_type == "root_attempt":
 
                 ip = generate_ip()
@@ -121,5 +119,4 @@ def create_logs(file_name, number_of_events):
 
 
 if __name__ == "__main__":
-
     create_logs("mock_server_log.txt", 100)
