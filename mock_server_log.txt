@@ -1,68 +1,217 @@
-2026-06-02 23:17:25 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 54.117.2.32
-2026-06-02 23:20:13 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 94.221.108.92
-2026-06-02 23:22:56 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-02 23:26:04 INFO inbound-traffic IP 128.128.31.253 connection established port 22
-2026-06-02 23:26:04 INFO sshd: Accepted password for research_user from 128.128.31.253 port 22 ssh2
-2026-06-02 23:27:58 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-02 23:28:59 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-02 23:32:14 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-02 23:35:26 INFO inbound-traffic IP 248.92.9.31 connection established port 22
-2026-06-02 23:35:26 INFO sshd: Accepted password for faculty_admin from 248.92.9.31 port 22 ssh2
-2026-06-02 23:38:27 INFO inbound-traffic IP 203.28.166.148 connection established port 22
-2026-06-02 23:38:27 INFO sshd: Accepted password for cathrene from 203.28.166.148 port 22 ssh2
-2026-06-02 23:42:25 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-02 23:46:06 INFO inbound-traffic IP 31.162.19.160 connection established port 22
-2026-06-02 23:46:06 INFO sshd: Accepted password for cathrene from 31.162.19.160 port 22 ssh2
-2026-06-02 23:47:39 INFO web-server GET /index.html HTTP/1.1 200 OK from 31.242.161.115
-2026-06-02 23:51:40 INFO web-server GET /api/status HTTP/1.1 200 OK from 82.82.9.82
-2026-06-02 23:53:51 INFO web-server GET /about.html HTTP/1.1 200 OK from 244.255.225.39
-2026-06-02 23:57:30 INFO web-server GET /api/status HTTP/1.1 200 OK from 174.236.13.195
-2026-06-02 23:59:05 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 32.43.21.248
-2026-06-03 00:00:44 INFO web-server GET /api/status HTTP/1.1 200 OK from 214.118.212.69
-2026-06-03 00:04:42 INFO web-server GET /api/status HTTP/1.1 200 OK from 93.170.240.39
-2026-06-03 00:07:23 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 00:09:46 INFO inbound-traffic IP 150.137.193.62 connection established port 22
-2026-06-03 00:09:46 INFO sshd: Accepted password for research_user from 150.137.193.62 port 22 ssh2
-2026-06-03 00:14:06 INFO inbound-traffic IP 245.192.144.210 connection established port 22
-2026-06-03 00:14:06 INFO sshd: Accepted password for faculty_admin from 245.192.144.210 port 22 ssh2
-2026-06-03 00:14:55 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 00:19:49 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-03 00:24:24 INFO web-server GET /about.html HTTP/1.1 200 OK from 80.243.164.69
-2026-06-03 00:25:11 INFO inbound-traffic IP 191.246.53.59 connection established port 22
-2026-06-03 00:25:11 INFO sshd: Accepted password for research_user from 191.246.53.59 port 22 ssh2
-2026-06-03 00:27:31 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 00:27:54 INFO web-server GET /api/status HTTP/1.1 200 OK from 94.23.86.188
-2026-06-03 00:30:45 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 239.228.247.249
-2026-06-03 00:32:26 INFO inbound-traffic IP 226.65.128.190 connection established port 22
-2026-06-03 00:32:26 INFO sshd: Accepted password for research_user from 226.65.128.190 port 22 ssh2
-2026-06-03 00:36:16 INFO inbound-traffic IP 156.147.5.205 connection established port 22
-2026-06-03 00:36:16 INFO sshd: Accepted password for student01 from 156.147.5.205 port 22 ssh2
-2026-06-03 00:39:31 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 52.168.49.172
-2026-06-03 00:41:33 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 00:45:27 INFO web-server GET /api/status HTTP/1.1 200 OK from 62.101.32.200
-2026-06-03 00:50:00 INFO inbound-traffic IP 207.17.242.40 connection established port 22
-2026-06-03 00:50:00 INFO sshd: Accepted password for research_user from 207.17.242.40 port 22 ssh2
-2026-06-03 00:50:37 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 00:55:13 INFO inbound-traffic IP 37.181.3.74 connection established port 22
-2026-06-03 00:55:13 INFO sshd: Accepted password for student01 from 37.181.3.74 port 22 ssh2
-2026-06-03 00:57:17 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-03 00:58:55 INFO inbound-traffic IP 129.145.118.252 connection established port 22
-2026-06-03 00:58:55 INFO sshd: Accepted password for cathrene from 129.145.118.252 port 22 ssh2
-2026-06-03 01:03:19 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 188.181.113.215
-2026-06-03 01:04:46 INFO web-server GET /index.html HTTP/1.1 200 OK from 114.236.120.218
-2026-06-03 01:09:26 INFO inbound-traffic IP 241.48.210.220 connection established port 22
-2026-06-03 01:09:26 INFO sshd: Accepted password for research_user from 241.48.210.220 port 22 ssh2
-2026-06-03 01:13:36 INFO inbound-traffic IP 25.16.90.91 connection established port 22
-2026-06-03 01:13:36 INFO sshd: Accepted password for faculty_admin from 25.16.90.91 port 22 ssh2
-2026-06-03 01:16:50 INFO inbound-traffic IP 80.110.218.79 connection established port 22
-2026-06-03 01:16:50 INFO sshd: Accepted password for student01 from 80.110.218.79 port 22 ssh2
-2026-06-03 01:18:32 INFO web-server GET /about.html HTTP/1.1 200 OK from 133.159.116.58
-2026-06-03 01:22:55 INFO inbound-traffic IP 233.187.13.200 connection established port 22
-2026-06-03 01:22:55 INFO sshd: Accepted password for research_user from 233.187.13.200 port 22 ssh2
-2026-06-03 01:26:11 INFO inbound-traffic IP 210.159.51.227 connection established port 22
-2026-06-03 01:26:11 INFO sshd: Accepted password for cathrene from 210.159.51.227 port 22 ssh2
-2026-06-03 01:29:44 INFO inbound-traffic IP 101.64.85.97 connection established port 22
-2026-06-03 01:29:44 INFO sshd: Accepted password for research_user from 101.64.85.97 port 22 ssh2
-2026-06-03 01:31:05 INFO web-server GET /index.html HTTP/1.1 200 OK from 29.201.251.25
-2026-06-03 01:33:04 INFO web-server GET /about.html HTTP/1.1 200 OK from 134.119.38.106
-2026-06-03 01:36:24 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-03 00:13:03 INFO inbound-traffic IP 241.113.74.109 connection established port 22
+2026-06-03 00:13:03 INFO sshd: Accepted password for faculty_admin from 241.113.74.109 port 22 ssh2
+2026-06-03 00:13:30 INFO inbound-traffic IP 50.133.33.103 connection established port 22
+2026-06-03 00:13:30 INFO sshd: Accepted password for research_user from 50.133.33.103 port 22 ssh2
+2026-06-03 00:17:18 INFO web-server GET /index.html HTTP/1.1 200 OK from 104.104.236.187
+2026-06-03 00:20:56 INFO inbound-traffic IP 112.67.27.204 connection established port 22
+2026-06-03 00:20:58 CRIT sshd: Unauthorized su root attempt failed from 112.67.27.204
+2026-06-03 00:21:54 INFO inbound-traffic IP 17.111.53.107 connection established port 22
+2026-06-03 00:21:54 INFO sshd: Accepted password for faculty_admin from 17.111.53.107 port 22 ssh2
+2026-06-03 00:23:24 INFO inbound-traffic IP 79.105.139.8 connection established port 22
+2026-06-03 00:23:24 INFO sshd: Accepted password for cathrene from 79.105.139.8 port 22 ssh2
+2026-06-03 00:24:22 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 00:29:07 INFO inbound-traffic IP 97.205.202.43 connection established port 22
+2026-06-03 00:29:07 INFO sshd: Accepted password for cathrene from 97.205.202.43 port 22 ssh2
+2026-06-03 00:33:05 INFO inbound-traffic IP 209.46.36.72 connection established port 22
+2026-06-03 00:33:07 CRIT sshd: Unauthorized su root attempt failed from 209.46.36.72
+2026-06-03 00:37:27 INFO inbound-traffic IP 214.8.122.246 connection established port 22
+2026-06-03 00:37:27 INFO sshd: Accepted password for student01 from 214.8.122.246 port 22 ssh2
+2026-06-03 00:41:37 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:41:38 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:41:40 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:41:43 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:41:45 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:41:47 WARN sshd: Failed password for invalid user admin from 189.175.67.13 port 22 ssh2
+2026-06-03 00:43:27 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:46:54 INFO inbound-traffic IP 248.160.220.9 connection established port 22
+2026-06-03 00:46:54 INFO sshd: Accepted password for student01 from 248.160.220.9 port 22 ssh2
+2026-06-03 00:48:39 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:48:41 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:48:43 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:48:45 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:48:46 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:48:49 WARN sshd: Failed password for invalid user admin from 44.57.64.98 port 22 ssh2
+2026-06-03 00:49:10 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:11 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:14 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:17 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:20 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:21 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:49:24 WARN sshd: Failed password for invalid user admin from 238.35.209.19 port 22 ssh2
+2026-06-03 00:54:23 INFO inbound-traffic IP 186.250.82.109 connection established port 22
+2026-06-03 00:54:23 INFO sshd: Accepted password for cathrene from 186.250.82.109 port 22 ssh2
+2026-06-03 00:55:38 INFO inbound-traffic IP 89.29.77.137 connection established port 22
+2026-06-03 00:55:38 INFO sshd: Accepted password for cathrene from 89.29.77.137 port 22 ssh2
+2026-06-03 01:00:35 WARN sshd: Failed password for cathrene from 160.27.25.43 port 22 ssh2
+2026-06-03 01:03:28 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 13.125.188.250
+2026-06-03 01:04:24 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-03 01:08:07 INFO inbound-traffic IP 87.34.33.155 connection established port 22
+2026-06-03 01:08:07 INFO sshd: Accepted password for cathrene from 87.34.33.155 port 22 ssh2
+2026-06-03 01:11:43 WARN sshd: Failed password for research_user from 11.253.127.111 port 22 ssh2
+2026-06-03 01:15:42 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 01:17:15 WARN sshd: Failed password for invalid user admin from 120.3.37.221 port 22 ssh2
+2026-06-03 01:17:16 WARN sshd: Failed password for invalid user admin from 120.3.37.221 port 22 ssh2
+2026-06-03 01:17:18 WARN sshd: Failed password for invalid user admin from 120.3.37.221 port 22 ssh2
+2026-06-03 01:17:20 WARN sshd: Failed password for invalid user admin from 120.3.37.221 port 22 ssh2
+2026-06-03 01:17:22 WARN sshd: Failed password for invalid user admin from 120.3.37.221 port 22 ssh2
+2026-06-03 01:21:14 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-03 01:23:39 INFO inbound-traffic IP 130.197.179.175 connection established port 22
+2026-06-03 01:23:41 CRIT sshd: Unauthorized su root attempt failed from 130.197.179.175
+2026-06-03 01:26:58 WARN sshd: Failed password for research_user from 208.0.66.159 port 22 ssh2
+2026-06-03 01:29:08 INFO inbound-traffic IP 208.21.17.133 connection established port 22
+2026-06-03 01:29:10 CRIT sshd: Unauthorized su root attempt failed from 208.21.17.133
+2026-06-03 01:30:25 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 212.238.6.127
+2026-06-03 01:31:24 WARN sshd: Failed password for research_user from 108.81.51.7 port 22 ssh2
+2026-06-03 01:32:59 INFO inbound-traffic IP 124.212.231.108 connection established port 22
+2026-06-03 01:33:01 CRIT sshd: Unauthorized su root attempt failed from 124.212.231.108
+2026-06-03 01:34:58 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 01:38:47 WARN sshd: Failed password for cathrene from 184.244.65.133 port 22 ssh2
+2026-06-03 01:41:31 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 241.68.35.127
+2026-06-03 01:42:25 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:26 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:28 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:31 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:32 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:33 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:42:36 WARN sshd: Failed password for invalid user admin from 34.166.104.241 port 22 ssh2
+2026-06-03 01:44:10 INFO inbound-traffic IP 192.52.21.151 connection established port 22
+2026-06-03 01:44:10 INFO sshd: Accepted password for faculty_admin from 192.52.21.151 port 22 ssh2
+2026-06-03 01:45:34 WARN sshd: Failed password for cathrene from 94.233.34.57 port 22 ssh2
+2026-06-03 01:49:26 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:28 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:29 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:30 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:31 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:33 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:49:35 WARN sshd: Failed password for invalid user admin from 183.30.231.164 port 22 ssh2
+2026-06-03 01:53:22 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-03 01:57:06 WARN sshd: Failed password for cathrene from 26.88.175.70 port 22 ssh2
+2026-06-03 01:59:14 WARN sshd: Failed password for student01 from 32.51.216.139 port 22 ssh2
+2026-06-03 02:02:03 WARN sshd: Failed password for research_user from 106.238.5.85 port 22 ssh2
+2026-06-03 02:05:44 INFO web-server GET /api/status HTTP/1.1 200 OK from 63.115.187.150
+2026-06-03 02:09:47 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:09:50 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:09:53 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:09:55 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:09:57 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:09:59 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:10:01 WARN sshd: Failed password for invalid user admin from 136.234.128.168 port 22 ssh2
+2026-06-03 02:14:36 WARN sshd: Failed password for faculty_admin from 92.172.109.52 port 22 ssh2
+2026-06-03 02:15:01 INFO inbound-traffic IP 58.49.5.94 connection established port 22
+2026-06-03 02:15:03 CRIT sshd: Unauthorized su root attempt failed from 58.49.5.94
+2026-06-03 02:17:43 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 92.118.211.43
+2026-06-03 02:18:26 INFO web-server GET /api/status HTTP/1.1 200 OK from 61.109.31.63
+2026-06-03 02:20:39 INFO inbound-traffic IP 106.213.223.125 connection established port 22
+2026-06-03 02:20:41 CRIT sshd: Unauthorized su root attempt failed from 106.213.223.125
+2026-06-03 02:23:13 WARN sshd: Failed password for cathrene from 38.168.232.63 port 22 ssh2
+2026-06-03 02:26:48 WARN sshd: Failed password for invalid user admin from 149.118.2.30 port 22 ssh2
+2026-06-03 02:26:50 WARN sshd: Failed password for invalid user admin from 149.118.2.30 port 22 ssh2
+2026-06-03 02:26:51 WARN sshd: Failed password for invalid user admin from 149.118.2.30 port 22 ssh2
+2026-06-03 02:26:53 WARN sshd: Failed password for invalid user admin from 149.118.2.30 port 22 ssh2
+2026-06-03 02:30:38 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 02:34:54 WARN sshd: Failed password for invalid user admin from 254.249.159.8 port 22 ssh2
+2026-06-03 02:34:57 WARN sshd: Failed password for invalid user admin from 254.249.159.8 port 22 ssh2
+2026-06-03 02:35:00 WARN sshd: Failed password for invalid user admin from 254.249.159.8 port 22 ssh2
+2026-06-03 02:35:03 WARN sshd: Failed password for invalid user admin from 254.249.159.8 port 22 ssh2
+2026-06-03 02:35:06 WARN sshd: Failed password for invalid user admin from 254.249.159.8 port 22 ssh2
+2026-06-03 02:39:21 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 02:42:02 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 02:42:31 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:32 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:34 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:35 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:38 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:39 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:42:41 WARN sshd: Failed password for invalid user admin from 21.142.227.9 port 22 ssh2
+2026-06-03 02:44:41 INFO inbound-traffic IP 46.5.81.109 connection established port 22
+2026-06-03 02:44:41 INFO sshd: Accepted password for faculty_admin from 46.5.81.109 port 22 ssh2
+2026-06-03 02:45:06 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 13.97.102.192
+2026-06-03 02:49:54 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:49:55 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:49:58 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:49:59 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:50:01 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:50:03 WARN sshd: Failed password for invalid user admin from 114.139.0.215 port 22 ssh2
+2026-06-03 02:53:52 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 02:56:18 WARN sshd: Failed password for faculty_admin from 186.132.71.200 port 22 ssh2
+2026-06-03 02:59:30 WARN sshd: Failed password for faculty_admin from 22.130.183.111 port 22 ssh2
+2026-06-03 03:03:44 INFO web-server GET /index.html HTTP/1.1 200 OK from 64.202.171.86
+2026-06-03 03:05:44 INFO web-server GET /api/status HTTP/1.1 200 OK from 187.62.185.46
+2026-06-03 03:06:43 WARN sshd: Failed password for invalid user admin from 105.42.0.65 port 22 ssh2
+2026-06-03 03:06:45 WARN sshd: Failed password for invalid user admin from 105.42.0.65 port 22 ssh2
+2026-06-03 03:06:46 WARN sshd: Failed password for invalid user admin from 105.42.0.65 port 22 ssh2
+2026-06-03 03:06:47 WARN sshd: Failed password for invalid user admin from 105.42.0.65 port 22 ssh2
+2026-06-03 03:09:22 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-03 03:14:09 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 03:14:59 INFO inbound-traffic IP 131.56.57.206 connection established port 22
+2026-06-03 03:15:01 CRIT sshd: Unauthorized su root attempt failed from 131.56.57.206
+2026-06-03 03:17:16 INFO inbound-traffic IP 80.18.50.68 connection established port 22
+2026-06-03 03:17:18 CRIT sshd: Unauthorized su root attempt failed from 80.18.50.68
+2026-06-03 03:21:30 INFO inbound-traffic IP 98.250.249.99 connection established port 22
+2026-06-03 03:21:32 CRIT sshd: Unauthorized su root attempt failed from 98.250.249.99
+2026-06-03 03:25:44 WARN sshd: Failed password for invalid user admin from 124.76.171.186 port 22 ssh2
+2026-06-03 03:25:46 WARN sshd: Failed password for invalid user admin from 124.76.171.186 port 22 ssh2
+2026-06-03 03:25:47 WARN sshd: Failed password for invalid user admin from 124.76.171.186 port 22 ssh2
+2026-06-03 03:25:50 WARN sshd: Failed password for invalid user admin from 124.76.171.186 port 22 ssh2
+2026-06-03 03:25:51 WARN sshd: Failed password for invalid user admin from 124.76.171.186 port 22 ssh2
+2026-06-03 03:28:31 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 164.83.133.37
+2026-06-03 03:31:23 INFO inbound-traffic IP 216.5.119.166 connection established port 22
+2026-06-03 03:31:23 INFO sshd: Accepted password for research_user from 216.5.119.166 port 22 ssh2
+2026-06-03 03:35:54 INFO inbound-traffic IP 185.150.95.123 connection established port 22
+2026-06-03 03:35:56 CRIT sshd: Unauthorized su root attempt failed from 185.150.95.123
+2026-06-03 03:38:28 INFO inbound-traffic IP 87.66.128.31 connection established port 22
+2026-06-03 03:38:28 INFO sshd: Accepted password for research_user from 87.66.128.31 port 22 ssh2
+2026-06-03 03:40:25 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 132.223.200.117
+2026-06-03 03:44:21 WARN sshd: Failed password for invalid user admin from 14.28.36.233 port 22 ssh2
+2026-06-03 03:44:23 WARN sshd: Failed password for invalid user admin from 14.28.36.233 port 22 ssh2
+2026-06-03 03:44:26 WARN sshd: Failed password for invalid user admin from 14.28.36.233 port 22 ssh2
+2026-06-03 03:44:29 WARN sshd: Failed password for invalid user admin from 14.28.36.233 port 22 ssh2
+2026-06-03 03:48:01 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:48:03 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:48:05 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:48:08 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:48:11 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:48:12 WARN sshd: Failed password for invalid user admin from 251.49.178.194 port 22 ssh2
+2026-06-03 03:52:07 INFO web-server GET /index.html HTTP/1.1 200 OK from 53.176.209.3
+2026-06-03 03:54:50 INFO inbound-traffic IP 17.147.124.162 connection established port 22
+2026-06-03 03:54:52 CRIT sshd: Unauthorized su root attempt failed from 17.147.124.162
+2026-06-03 03:56:29 WARN sshd: Failed password for student01 from 219.187.12.18 port 22 ssh2
+2026-06-03 04:00:55 INFO inbound-traffic IP 70.57.95.32 connection established port 22
+2026-06-03 04:00:57 CRIT sshd: Unauthorized su root attempt failed from 70.57.95.32
+2026-06-03 04:03:29 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 241.185.32.1
+2026-06-03 04:06:47 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:50 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:51 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:53 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:54 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:57 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:06:59 WARN sshd: Failed password for invalid user admin from 92.8.5.73 port 22 ssh2
+2026-06-03 04:09:57 INFO web-server GET /api/status HTTP/1.1 200 OK from 193.23.127.58
+2026-06-03 04:14:54 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:14:55 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:14:56 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:14:59 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:15:00 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:15:01 WARN sshd: Failed password for invalid user admin from 233.163.222.252 port 22 ssh2
+2026-06-03 04:17:04 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 04:18:53 WARN sshd: Failed password for student01 from 145.92.34.12 port 22 ssh2
+2026-06-03 04:22:27 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:22:29 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:22:30 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:22:32 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:22:35 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:22:37 WARN sshd: Failed password for invalid user admin from 73.231.252.238 port 22 ssh2
+2026-06-03 04:24:04 INFO inbound-traffic IP 144.85.165.250 connection established port 22
+2026-06-03 04:24:04 INFO sshd: Accepted password for faculty_admin from 144.85.165.250 port 22 ssh2
+2026-06-03 04:26:04 WARN sshd: Failed password for faculty_admin from 197.130.22.237 port 22 ssh2
+2026-06-03 04:27:35 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 245.34.107.147
+2026-06-03 04:32:16 WARN sshd: Failed password for research_user from 134.142.75.127 port 22 ssh2
+2026-06-03 04:35:58 WARN sshd: Failed password for cathrene from 127.160.250.244 port 22 ssh2
+2026-06-03 04:36:22 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 04:37:07 INFO inbound-traffic IP 13.246.0.96 connection established port 22
+2026-06-03 04:37:09 CRIT sshd: Unauthorized su root attempt failed from 13.246.0.96
+2026-06-03 04:38:53 WARN sshd: Failed password for student01 from 86.221.14.9 port 22 ssh2
+2026-06-03 04:40:37 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 04:41:26 INFO inbound-traffic IP 205.204.248.57 connection established port 22
+2026-06-03 04:41:26 INFO sshd: Accepted password for student01 from 205.204.248.57 port 22 ssh2
+2026-06-03 04:42:37 WARN sshd: Failed password for student01 from 243.209.233.140 port 22 ssh2

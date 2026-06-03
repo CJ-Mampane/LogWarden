@@ -35,16 +35,17 @@ def create_logs(file_name, number_of_events):
         "Security-Auditing Service"
     ]
 
+    failed_ips = []
+
     with open(file_name, "w") as file:
 
         for _ in range(number_of_events):
 
             current_time += timedelta(seconds=random.randint(20, 300))
-
             timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
             event_type = random.choice(
-                ["ssh", "web", "system"]
+                ["ssh", "web", "system", "failed_login", "bruteforce", "root_attempt"]
             )
 
             if event_type == "ssh":
@@ -68,10 +69,52 @@ def create_logs(file_name, number_of_events):
                     f"{timestamp} INFO web-server GET {random.choice(pages)} HTTP/1.1 200 OK from {ip}\n"
                 )
 
-            else:
+            elif event_type == "system":
 
                 file.write(
                     f"{timestamp} INFO systemd[1]: Started {random.choice(services)}.\n"
+                )
+
+            # Failed login (single attempts)
+            elif event_type == "failed_login":
+
+                ip = generate_ip()
+                user = random.choice(users)
+
+                file.write(
+                    f"{timestamp} WARN sshd: Failed password for {user} from {ip} port 22 ssh2\n"
+                )
+
+            elif event_type == "bruteforce":
+
+                attacker_ip = generate_ip()
+                target_user = "admin"
+
+                # simulate multiple rapid failures
+                for _ in range(random.randint(4, 7)):
+
+                    current_time += timedelta(seconds=random.randint(1, 3))
+                    burst_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
+                    file.write(
+                        f"{burst_time} WARN sshd: Failed password for invalid user "
+                        f"{target_user} from {attacker_ip} port 22 ssh2\n"
+                    )
+
+            # Privilege escalation attempt
+            elif event_type == "root_attempt":
+
+                ip = generate_ip()
+
+                file.write(
+                    f"{timestamp} INFO inbound-traffic IP {ip} connection established port 22\n"
+                )
+
+                current_time += timedelta(seconds=2)
+                crit_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
+
+                file.write(
+                    f"{crit_time} CRIT sshd: Unauthorized su root attempt failed from {ip}\n"
                 )
 
     print(f"Generated {number_of_events} log events in '{file_name}'")
@@ -79,4 +122,4 @@ def create_logs(file_name, number_of_events):
 
 if __name__ == "__main__":
 
-    create_logs("mock_server_log.txt", 50)
+    create_logs("mock_server_log.txt", 100)
