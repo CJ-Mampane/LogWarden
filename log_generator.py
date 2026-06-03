@@ -39,9 +39,7 @@ def create_logs(file_name, number_of_events):
 
         for _ in range(number_of_events):
 
-            current_time += timedelta(
-                seconds=random.randint(30, 600)
-            )
+            current_time += timedelta(seconds=random.randint(20, 300))
 
             timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
@@ -55,13 +53,11 @@ def create_logs(file_name, number_of_events):
                 user = random.choice(users)
 
                 file.write(
-                    f"{timestamp} INFO inbound-traffic IP "
-                    f"{ip} connection established port 22\n"
+                    f"{timestamp} INFO inbound-traffic IP {ip} connection established port 22\n"
                 )
 
                 file.write(
-                    f"{timestamp} INFO sshd[1024]: Accepted password "
-                    f"for {user} from {ip} port 22 ssh2\n"
+                    f"{timestamp} INFO sshd: Accepted password for {user} from {ip} port 22 ssh2\n"
                 )
 
             elif event_type == "web":
@@ -69,16 +65,13 @@ def create_logs(file_name, number_of_events):
                 ip = generate_ip()
 
                 file.write(
-                    f"{timestamp} INFO web-server GET "
-                    f"{random.choice(pages)} HTTP/1.1 200 OK "
-                    f"from {ip}\n"
+                    f"{timestamp} INFO web-server GET {random.choice(pages)} HTTP/1.1 200 OK from {ip}\n"
                 )
 
             else:
 
                 file.write(
-                    f"{timestamp} INFO systemd[1]: Started "
-                    f"{random.choice(services)}.\n"
+                    f"{timestamp} INFO systemd[1]: Started {random.choice(services)}.\n"
                 )
 
     print(f"Generated {number_of_events} log events in '{file_name}'")

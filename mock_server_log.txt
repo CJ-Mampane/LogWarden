@@ -1,70 +1,68 @@
-2026-06-02 22:25:08 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 232.153.89.87
-2026-06-02 22:29:34 INFO web-server GET /index.html HTTP/1.1 200 OK from 26.207.0.88
-2026-06-02 22:32:19 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-02 22:35:12 INFO inbound-traffic IP 156.10.102.237 connection established port 22
-2026-06-02 22:35:12 INFO sshd[1024]: Accepted password for student01 from 156.10.102.237 port 22 ssh2
-2026-06-02 22:36:41 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-02 22:41:38 INFO web-server GET /api/status HTTP/1.1 200 OK from 132.193.86.186
-2026-06-02 22:46:24 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-02 22:51:10 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 149.183.153.235
-2026-06-02 22:58:58 INFO inbound-traffic IP 15.109.78.24 connection established port 22
-2026-06-02 22:58:58 INFO sshd[1024]: Accepted password for student01 from 15.109.78.24 port 22 ssh2
-2026-06-02 23:04:21 INFO web-server GET /about.html HTTP/1.1 200 OK from 141.2.114.182
-2026-06-02 23:05:33 INFO inbound-traffic IP 74.94.16.130 connection established port 22
-2026-06-02 23:05:33 INFO sshd[1024]: Accepted password for student01 from 74.94.16.130 port 22 ssh2
-2026-06-02 23:11:39 INFO inbound-traffic IP 90.88.107.40 connection established port 22
-2026-06-02 23:11:39 INFO sshd[1024]: Accepted password for faculty_admin from 90.88.107.40 port 22 ssh2
-2026-06-02 23:21:39 INFO inbound-traffic IP 149.197.156.187 connection established port 22
-2026-06-02 23:21:39 INFO sshd[1024]: Accepted password for cathrene from 149.197.156.187 port 22 ssh2
-2026-06-02 23:27:44 INFO inbound-traffic IP 145.34.96.230 connection established port 22
-2026-06-02 23:27:44 INFO sshd[1024]: Accepted password for faculty_admin from 145.34.96.230 port 22 ssh2
-2026-06-02 23:31:26 INFO inbound-traffic IP 153.202.11.241 connection established port 22
-2026-06-02 23:31:26 INFO sshd[1024]: Accepted password for cathrene from 153.202.11.241 port 22 ssh2
-2026-06-02 23:38:24 INFO inbound-traffic IP 85.132.95.158 connection established port 22
-2026-06-02 23:38:24 INFO sshd[1024]: Accepted password for faculty_admin from 85.132.95.158 port 22 ssh2
-2026-06-02 23:42:22 INFO inbound-traffic IP 237.174.142.246 connection established port 22
-2026-06-02 23:42:22 INFO sshd[1024]: Accepted password for cathrene from 237.174.142.246 port 22 ssh2
-2026-06-02 23:45:53 INFO inbound-traffic IP 119.63.14.233 connection established port 22
-2026-06-02 23:45:53 INFO sshd[1024]: Accepted password for faculty_admin from 119.63.14.233 port 22 ssh2
-2026-06-02 23:47:47 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-02 23:48:32 INFO web-server GET /about.html HTTP/1.1 200 OK from 92.98.28.155
-2026-06-02 23:50:18 INFO inbound-traffic IP 119.36.133.238 connection established port 22
-2026-06-02 23:50:18 INFO sshd[1024]: Accepted password for faculty_admin from 119.36.133.238 port 22 ssh2
-2026-06-02 23:56:32 INFO web-server GET /api/status HTTP/1.1 200 OK from 23.188.75.23
-2026-06-03 00:02:31 INFO web-server GET /index.html HTTP/1.1 200 OK from 230.200.136.41
-2026-06-03 00:09:01 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-03 00:18:49 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-03 00:27:19 INFO web-server GET /index.html HTTP/1.1 200 OK from 96.13.250.166
-2026-06-03 00:31:47 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 168.59.156.55
-2026-06-03 00:36:55 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 24.201.60.29
-2026-06-03 00:39:51 INFO web-server GET /index.html HTTP/1.1 200 OK from 86.38.210.46
-2026-06-03 00:47:27 INFO web-server GET /api/status HTTP/1.1 200 OK from 130.121.60.251
-2026-06-03 00:48:34 INFO inbound-traffic IP 164.33.172.141 connection established port 22
-2026-06-03 00:48:34 INFO sshd[1024]: Accepted password for cathrene from 164.33.172.141 port 22 ssh2
-2026-06-03 00:57:30 INFO web-server GET /index.html HTTP/1.1 200 OK from 248.163.180.209
-2026-06-03 01:07:09 INFO web-server GET /index.html HTTP/1.1 200 OK from 199.176.135.16
-2026-06-03 01:09:15 INFO inbound-traffic IP 100.53.120.57 connection established port 22
-2026-06-03 01:09:15 INFO sshd[1024]: Accepted password for student01 from 100.53.120.57 port 22 ssh2
-2026-06-03 01:12:01 INFO systemd[1]: Started Periodic Command Scheduler (cron).
-2026-06-03 01:17:57 INFO inbound-traffic IP 48.40.63.21 connection established port 22
-2026-06-03 01:17:57 INFO sshd[1024]: Accepted password for faculty_admin from 48.40.63.21 port 22 ssh2
-2026-06-03 01:25:42 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 61.124.201.171
-2026-06-03 01:30:56 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-03 01:35:49 INFO systemd[1]: Started Security-Auditing Service.
-2026-06-03 01:45:10 INFO systemd[1]: Started Daily System Backup Utility.
-2026-06-03 01:45:40 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 205.118.145.237
-2026-06-03 01:48:59 INFO inbound-traffic IP 34.57.229.62 connection established port 22
-2026-06-03 01:48:59 INFO sshd[1024]: Accepted password for student01 from 34.57.229.62 port 22 ssh2
-2026-06-03 01:55:03 INFO inbound-traffic IP 209.47.205.171 connection established port 22
-2026-06-03 01:55:03 INFO sshd[1024]: Accepted password for cathrene from 209.47.205.171 port 22 ssh2
-2026-06-03 02:00:53 INFO web-server GET /api/status HTTP/1.1 200 OK from 178.120.142.112
-2026-06-03 02:04:14 INFO inbound-traffic IP 73.145.149.66 connection established port 22
-2026-06-03 02:04:14 INFO sshd[1024]: Accepted password for student01 from 73.145.149.66 port 22 ssh2
-2026-06-03 02:08:53 INFO web-server GET /about.html HTTP/1.1 200 OK from 32.230.71.121
-2026-06-03 02:13:27 INFO inbound-traffic IP 58.150.169.123 connection established port 22
-2026-06-03 02:13:27 INFO sshd[1024]: Accepted password for cathrene from 58.150.169.123 port 22 ssh2
-2026-06-03 02:23:07 INFO inbound-traffic IP 57.0.125.141 connection established port 22
-2026-06-03 02:23:07 INFO sshd[1024]: Accepted password for cathrene from 57.0.125.141 port 22 ssh2
-2026-06-03 02:28:13 INFO inbound-traffic IP 134.174.114.250 connection established port 22
-2026-06-03 02:28:13 INFO sshd[1024]: Accepted password for cathrene from 134.174.114.250 port 22 ssh2
-2026-06-03 02:33:21 INFO web-server GET /api/status HTTP/1.1 200 OK from 147.245.246.171
+2026-06-02 23:17:25 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 54.117.2.32
+2026-06-02 23:20:13 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 94.221.108.92
+2026-06-02 23:22:56 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-02 23:26:04 INFO inbound-traffic IP 128.128.31.253 connection established port 22
+2026-06-02 23:26:04 INFO sshd: Accepted password for research_user from 128.128.31.253 port 22 ssh2
+2026-06-02 23:27:58 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-02 23:28:59 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-02 23:32:14 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-02 23:35:26 INFO inbound-traffic IP 248.92.9.31 connection established port 22
+2026-06-02 23:35:26 INFO sshd: Accepted password for faculty_admin from 248.92.9.31 port 22 ssh2
+2026-06-02 23:38:27 INFO inbound-traffic IP 203.28.166.148 connection established port 22
+2026-06-02 23:38:27 INFO sshd: Accepted password for cathrene from 203.28.166.148 port 22 ssh2
+2026-06-02 23:42:25 INFO systemd[1]: Started Daily System Backup Utility.
+2026-06-02 23:46:06 INFO inbound-traffic IP 31.162.19.160 connection established port 22
+2026-06-02 23:46:06 INFO sshd: Accepted password for cathrene from 31.162.19.160 port 22 ssh2
+2026-06-02 23:47:39 INFO web-server GET /index.html HTTP/1.1 200 OK from 31.242.161.115
+2026-06-02 23:51:40 INFO web-server GET /api/status HTTP/1.1 200 OK from 82.82.9.82
+2026-06-02 23:53:51 INFO web-server GET /about.html HTTP/1.1 200 OK from 244.255.225.39
+2026-06-02 23:57:30 INFO web-server GET /api/status HTTP/1.1 200 OK from 174.236.13.195
+2026-06-02 23:59:05 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 32.43.21.248
+2026-06-03 00:00:44 INFO web-server GET /api/status HTTP/1.1 200 OK from 214.118.212.69
+2026-06-03 00:04:42 INFO web-server GET /api/status HTTP/1.1 200 OK from 93.170.240.39
+2026-06-03 00:07:23 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:09:46 INFO inbound-traffic IP 150.137.193.62 connection established port 22
+2026-06-03 00:09:46 INFO sshd: Accepted password for research_user from 150.137.193.62 port 22 ssh2
+2026-06-03 00:14:06 INFO inbound-traffic IP 245.192.144.210 connection established port 22
+2026-06-03 00:14:06 INFO sshd: Accepted password for faculty_admin from 245.192.144.210 port 22 ssh2
+2026-06-03 00:14:55 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:19:49 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 00:24:24 INFO web-server GET /about.html HTTP/1.1 200 OK from 80.243.164.69
+2026-06-03 00:25:11 INFO inbound-traffic IP 191.246.53.59 connection established port 22
+2026-06-03 00:25:11 INFO sshd: Accepted password for research_user from 191.246.53.59 port 22 ssh2
+2026-06-03 00:27:31 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:27:54 INFO web-server GET /api/status HTTP/1.1 200 OK from 94.23.86.188
+2026-06-03 00:30:45 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 239.228.247.249
+2026-06-03 00:32:26 INFO inbound-traffic IP 226.65.128.190 connection established port 22
+2026-06-03 00:32:26 INFO sshd: Accepted password for research_user from 226.65.128.190 port 22 ssh2
+2026-06-03 00:36:16 INFO inbound-traffic IP 156.147.5.205 connection established port 22
+2026-06-03 00:36:16 INFO sshd: Accepted password for student01 from 156.147.5.205 port 22 ssh2
+2026-06-03 00:39:31 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 52.168.49.172
+2026-06-03 00:41:33 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:45:27 INFO web-server GET /api/status HTTP/1.1 200 OK from 62.101.32.200
+2026-06-03 00:50:00 INFO inbound-traffic IP 207.17.242.40 connection established port 22
+2026-06-03 00:50:00 INFO sshd: Accepted password for research_user from 207.17.242.40 port 22 ssh2
+2026-06-03 00:50:37 INFO systemd[1]: Started Security-Auditing Service.
+2026-06-03 00:55:13 INFO inbound-traffic IP 37.181.3.74 connection established port 22
+2026-06-03 00:55:13 INFO sshd: Accepted password for student01 from 37.181.3.74 port 22 ssh2
+2026-06-03 00:57:17 INFO systemd[1]: Started Periodic Command Scheduler (cron).
+2026-06-03 00:58:55 INFO inbound-traffic IP 129.145.118.252 connection established port 22
+2026-06-03 00:58:55 INFO sshd: Accepted password for cathrene from 129.145.118.252 port 22 ssh2
+2026-06-03 01:03:19 INFO web-server GET /images/logo.png HTTP/1.1 200 OK from 188.181.113.215
+2026-06-03 01:04:46 INFO web-server GET /index.html HTTP/1.1 200 OK from 114.236.120.218
+2026-06-03 01:09:26 INFO inbound-traffic IP 241.48.210.220 connection established port 22
+2026-06-03 01:09:26 INFO sshd: Accepted password for research_user from 241.48.210.220 port 22 ssh2
+2026-06-03 01:13:36 INFO inbound-traffic IP 25.16.90.91 connection established port 22
+2026-06-03 01:13:36 INFO sshd: Accepted password for faculty_admin from 25.16.90.91 port 22 ssh2
+2026-06-03 01:16:50 INFO inbound-traffic IP 80.110.218.79 connection established port 22
+2026-06-03 01:16:50 INFO sshd: Accepted password for student01 from 80.110.218.79 port 22 ssh2
+2026-06-03 01:18:32 INFO web-server GET /about.html HTTP/1.1 200 OK from 133.159.116.58
+2026-06-03 01:22:55 INFO inbound-traffic IP 233.187.13.200 connection established port 22
+2026-06-03 01:22:55 INFO sshd: Accepted password for research_user from 233.187.13.200 port 22 ssh2
+2026-06-03 01:26:11 INFO inbound-traffic IP 210.159.51.227 connection established port 22
+2026-06-03 01:26:11 INFO sshd: Accepted password for cathrene from 210.159.51.227 port 22 ssh2
+2026-06-03 01:29:44 INFO inbound-traffic IP 101.64.85.97 connection established port 22
+2026-06-03 01:29:44 INFO sshd: Accepted password for research_user from 101.64.85.97 port 22 ssh2
+2026-06-03 01:31:05 INFO web-server GET /index.html HTTP/1.1 200 OK from 29.201.251.25
+2026-06-03 01:33:04 INFO web-server GET /about.html HTTP/1.1 200 OK from 134.119.38.106
+2026-06-03 01:36:24 INFO systemd[1]: Started Daily System Backup Utility.
