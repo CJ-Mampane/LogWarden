@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def analyze_logs(log_file_path):
     print("Initializing LogWarden security scan...")
 
@@ -51,45 +53,46 @@ def analyze_logs(log_file_path):
             print("No critical infrastructure alerts found.")
 
 
-
         report_path = "incident_report.md"
         print(f"\nSaving incident report to '{report_path}'...")
 
         try:
             with open(report_path, "w") as report:
 
-                report.write("# LogWarden INCIDENT REPORT\n")
+                # Upgraded Header with Emojis and Timestamp
+                report.write("# LogWarden INCIDENT REPORT\n\n")
+                report.write(f"**Scan Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
 
                 report.write("## SUMMARY\n\n")
                 report.write("Automated scan of system logs completed. "
                              "Below are the detected anomalies and flagged activities.\n\n")
 
-                # Brute force section
+                # Brute force section upgraded with bullet points and code formatting (`ip`)
                 report.write("## BRUTE FORCE DETECTION\n\n")
 
                 bf_found = False
 
                 for ip, count in failed_login_counts.items():
                     if count > 3:
-                        report.write(f"Suspicious IP: {ip}\n")
-                        report.write(f"Failed attempts: {count}\n")
-                        report.write(f"Status: Flagged for possible brute force activity\n\n")
+                        report.write(f"* **Suspicious IP:** `{ip}`\n")
+                        report.write(f"* **Failed attempts:** `{count}`\n")
+                        report.write(f"* **Status:** Flagged for possible brute force activity\n\n")
                         bf_found = True
 
                 if not bf_found:
-                    report.write("No brute force patterns detected in this scan.\n\n")
+                    report.write("> *No brute force patterns detected in this scan.*\n\n")
 
-                # Critical alerts section
+                # Critical alerts section upgraded with code blocks
                 report.write("## CRITICAL EVENTS\n\n")
 
                 if critical_alerts:
                     for alert in critical_alerts:
-                        report.write(f"{alert}\n")
+                        report.write(f"```text\n{alert}\n```\n\n")
                 else:
-                    report.write("No critical system alerts found.\n")
+                    report.write("> *No critical system alerts found.*\n\n")
 
-                report.write("\n---\n")
-                report.write("LogWarden scan complete.\n")
+                report.write("---\n")
+                report.write("*LogWarden scan complete.*\n")
 
         except Exception as e:
             print(f"Error while writing report: {e}")
