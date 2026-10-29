@@ -1,0 +1,13 @@
+# PyCharm settings
+.idea/
+
+# Python cache files
+__pycache__/
+.pytest_cache/
+.venv/
+
+# Real log files should never be uploaded
+*.log
+
+# Reports made while testing
+test_report.md

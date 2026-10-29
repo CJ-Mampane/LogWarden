@@ -1,0 +1,22 @@
+# Runs the tests on GitHub every time I push
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run tests
+        run: pytest -v
+      - name: Run LogWarden on the mock log
+        run: python log_warden.py --year 2026 -o test_report.md

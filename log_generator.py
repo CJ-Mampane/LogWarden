@@ -1,122 +1,121 @@
 import random
 from datetime import datetime, timedelta
 
+# Creates a mock Linux auth.log with normal activity and five planted attacks,
+# so LogWarden can be tested without touching a real server.
+#
+# All IPs come from ranges that are reserved for examples (192.0.2.x, 198.51.100.x
+# and 203.0.113.x), so none of them belong to a real computer.
 
-def generate_ip():
-    return (
-        f"{random.randint(1, 255)}."
-        f"{random.randint(0, 255)}."
-        f"{random.randint(0, 255)}."
-        f"{random.randint(1, 254)}"
-    )
+SERVER = "lab-server"
+USERS = ["cathrene", "student01", "research_user", "faculty_admin"]
+OFFICE_IPS = ["192.0.2.10", "192.0.2.11", "192.0.2.12"]
+ROUTINE_COMMANDS = ["/usr/bin/apt update", "/usr/bin/systemctl status nginx",
+                    "/usr/bin/tail /var/log/syslog"]
+
+log_lines = []
 
 
-def create_logs(file_name, number_of_events):
+def add_line(time, program, message):
+    # Writes the time the same way Linux does, for example "Jun  3 01:11:00"
+    stamp = f"{time:%b} {time.day:>2} {time:%H:%M:%S}"
+    if program == "sudo":
+        log_lines.append((time, f"{stamp} {SERVER} sudo: {message}"))
+    else:
+        log_lines.append((time, f"{stamp} {SERVER} {program}[{random.randint(1000, 65000)}]: {message}"))
 
-    current_time = datetime.now() - timedelta(days=1)
 
-    users = [
-        "cathrene",
-        "student01",
-        "research_user",
-        "faculty_admin"
-    ]
+def normal_activity(start, hours):
+    # People logging in with SSH keys, the odd password typo, and normal sudo use
+    for _ in range(hours * 3):
+        time = start + timedelta(seconds=random.randint(0, hours * 3600))
+        user = random.choice(USERS)
+        ip = random.choice(OFFICE_IPS)
+        port = random.randint(40000, 60000)
 
-    pages = [
-        "/index.html",
-        "/about.html",
-        "/images/logo.png",
-        "/api/status"
-    ]
+        if random.random() < 0.15:
+            # someone typed their password wrong once before logging in
+            add_line(time, "sshd", f"Failed password for {user} from {ip} port {port} ssh2")
+            time += timedelta(seconds=random.randint(4, 12))
 
-    services = [
-        "Periodic Command Scheduler (cron)",
-        "Daily System Backup Utility",
-        "Security-Auditing Service"
-    ]
+        add_line(time, "sshd", f"Accepted publickey for {user} from {ip} port {port} ssh2")
+        add_line(time, "sshd", f"pam_unix(sshd:session): session opened for user {user}(uid=1000) by (uid=0)")
 
-    # used to simulate repeated attacker behavior
-    failed_ips = []
+        if random.random() < 0.3:
+            add_line(time + timedelta(seconds=40), "sudo",
+                     f" {user} : TTY=pts/0 ; PWD=/home/{user} ; USER=root ; "
+                     f"COMMAND={random.choice(ROUTINE_COMMANDS)}")
 
-    with open(file_name, "w") as file:
+    # scheduled jobs that run every hour
+    for hour in range(hours):
+        add_line(start + timedelta(hours=hour, minutes=17), "CRON",
+                 "pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)")
 
-        for _ in range(number_of_events):
 
-            current_time += timedelta(seconds=random.randint(20, 300))
-            timestamp = current_time.strftime("%Y-%m-%d %H:%M:%S")
+def brute_force(time, ip, user, attempts, invalid=False):
+    who = f"invalid user {user}" if invalid else user
+    for _ in range(attempts):
+        port = random.randint(30000, 60000)
+        if invalid:
+            add_line(time, "sshd", f"Invalid user {user} from {ip} port {port}")
+        add_line(time, "sshd", f"Failed password for {who} from {ip} port {port} ssh2")
+        time += timedelta(seconds=random.randint(1, 4))
+    return time
 
-            event_type = random.choice(
-                ["ssh", "web", "system", "failed_login", "bruteforce", "root_attempt"]
-            )
 
-            if event_type == "ssh":
+def password_spray(time, ip, usernames):
+    # Attackers try one password on many usernames and go slowly to avoid being blocked
+    for user in usernames:
+        port = random.randint(30000, 60000)
+        add_line(time, "sshd", f"Invalid user {user} from {ip} port {port}")
+        add_line(time, "sshd", f"Failed password for invalid user {user} from {ip} port {port} ssh2")
+        time += timedelta(seconds=random.randint(80, 85))
 
-                ip = generate_ip()
-                user = random.choice(users)
 
-                file.write(
-                    f"{timestamp} INFO inbound-traffic IP {ip} connection established port 22\n"
-                )
+def create_logs(file_name, seed=42):
+    random.seed(seed)  # the same seed always gives the same log file
+    log_lines.clear()
+    start = datetime(2026, 6, 3, 1, 0, 0)
 
-                file.write(
-                    f"{timestamp} INFO sshd: Accepted password for {user} from {ip} port 22 ssh2\n"
-                )
+    normal_activity(start, hours=8)
 
-            elif event_type == "web":
+    # Attack 1: brute force on a username that doesn't exist
+    brute_force(start + timedelta(minutes=26), "203.0.113.45", "admin", 30, invalid=True)
 
-                ip = generate_ip()
+    # Attack 2: password spraying with common usernames
+    password_spray(start + timedelta(hours=1, minutes=40), "198.51.100.23",
+                   ["admin", "test", "oracle", "ubuntu", "postgres", "guest", "pi", "ftpuser"])
 
-                file.write(
-                    f"{timestamp} INFO web-server GET {random.choice(pages)} HTTP/1.1 200 OK from {ip}\n"
-                )
+    # Attack 3: brute force that works, followed by risky sudo commands
+    time = brute_force(start + timedelta(hours=3, minutes=12), "203.0.113.99", "research_user", 7)
+    time += timedelta(seconds=6)
+    add_line(time, "sshd", "Accepted password for research_user from 203.0.113.99 port 51515 ssh2")
+    for minutes, command in [(2, "/usr/bin/cat /etc/shadow"),
+                             (3, "/usr/sbin/useradd -m -s /bin/bash backup-svc"),
+                             (4, "/usr/bin/chmod 4755 /tmp/.helper")]:
+        add_line(time + timedelta(minutes=minutes), "sudo",
+                 f" research_user : TTY=pts/1 ; PWD=/home/research_user ; USER=root ; COMMAND={command}")
 
-            elif event_type == "system":
+    # Attack 4: a user trying to become root with su and the wrong password
+    time = start + timedelta(hours=5, minutes=3)
+    for attempt in range(3):
+        attempt_time = time + timedelta(seconds=15 * attempt)
+        add_line(attempt_time, "su",
+                 "pam_unix(su:auth): authentication failure; logname=student01 uid=1001 "
+                 "euid=0 tty=/dev/pts/2 ruser=student01 rhost=  user=root")
+        add_line(attempt_time, "su", "FAILED SU (to root) student01 on pts/2")
 
-                file.write(
-                    f"{timestamp} INFO systemd[1]: Started {random.choice(services)}.\n"
-                )
+    # Attack 5: someone logging in directly as root
+    add_line(start + timedelta(hours=6, minutes=44), "sshd",
+             "Accepted password for root from 192.0.2.200 port 40022 ssh2")
 
-            elif event_type == "failed_login":
+    log_lines.sort(key=lambda item: item[0])
+    with open(file_name, "w", encoding="utf-8", newline="\n") as file:
+        for _, line in log_lines:
+            file.write(line + "\n")
 
-                ip = generate_ip()
-                user = random.choice(users)
-
-                file.write(
-                    f"{timestamp} WARN sshd: Failed password for {user} from {ip} port 22 ssh2\n"
-                )
-
-            elif event_type == "bruteforce":
-
-                attacker_ip = generate_ip()
-                target_user = "admin"
-
-                for _ in range(random.randint(4, 7)):
-
-                    current_time += timedelta(seconds=random.randint(1, 3))
-                    burst_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
-
-                    file.write(
-                        f"{burst_time} WARN sshd: Failed password for invalid user "
-                        f"{target_user} from {attacker_ip} port 22 ssh2\n"
-                    )
-
-            elif event_type == "root_attempt":
-
-                ip = generate_ip()
-
-                file.write(
-                    f"{timestamp} INFO inbound-traffic IP {ip} connection established port 22\n"
-                )
-
-                current_time += timedelta(seconds=2)
-                crit_time = current_time.strftime("%Y-%m-%d %H:%M:%S")
-
-                file.write(
-                    f"{crit_time} CRIT sshd: Unauthorized su root attempt failed from {ip}\n"
-                )
-
-    print(f"Generated {number_of_events} log events in '{file_name}'")
+    print(f"Generated {len(log_lines)} log lines in '{file_name}'")
 
 
 if __name__ == "__main__":
-    create_logs("mock_server_log.txt", 100)
+    create_logs("mock_server_log.txt")
